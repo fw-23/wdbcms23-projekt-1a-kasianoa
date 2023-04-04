@@ -1,0 +1,205 @@
+@import url(scrollbar.css);
+@font-face {
+    font-family: custom;
+    src: url(../media/font.ttf);
+}
+
+body {
+    background-color: #ffdb01;
+    overflow: hidden;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+div {
+    background-color: #ffdb01;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height:93vh;
+    width: 100vw;
+}
+
+.bookmarks {
+    display: flex;
+    flex-direction: column;
+    outline: 4px;
+    outline-style: solid;
+    outline-color: black;
+    width: 27%;
+    justify-content: end;
+}
+
+.bookmarks > div > ul {
+    direction: ltr;
+    height: 100%;
+    line-height: 2vw;
+    margin-top: 1vh;
+    z-index: 2;
+}
+
+#scrollable {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    direction: rtl;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.bookmarks > div > ul > li {
+    list-style-type: none;
+    font-size: 1.8vw; 
+    font-family: custom;
+    color: black;
+    text-align: left;
+    margin-left: -1.4vw;
+}
+
+.bookmarks > div > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+.bookmarks > div > ul > li > a:hover {
+    font-size: 95%;
+}
+
+.widgets {
+    display: flex;
+    flex-direction: column;
+    outline: 4px;
+    outline-style: solid;
+    outline-color: black;
+    width: 100%;
+}
+
+.widgets > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.top {
+    height: 40%
+}
+
+.bottom {
+    height: 70%;
+}
+
+.widgets > div > div {
+    outline: 4px;
+    outline-style: solid;
+    outline-color: black;
+}
+
+.bored { 
+    width: 70%;
+}
+
+.clock { 
+    width: 30%;
+}
+
+.weather { 
+    width: 35%;
+}
+
+.chatgpt { 
+    width: 65%;
+}
+
+.news {
+    outline: 4px;
+    outline-style: solid;
+    outline-color: black;
+    height: 10vh;
+    width: 1000vw;
+    position: relative;
+    top: 90vh;
+    left: -10vh;
+    white-space: nowrap;
+}
+
+.news > span {
+    position: inherit;
+} 
+
+.news > div > h2 {
+position: inherit;
+left: 10vh;
+font-family: custom;
+font-size: 2rem;
+letter-spacing: 8px;
+
+}
+
+.news > span > h2 {
+    position: inherit;
+    left: 10vh;
+    font-family: custom;
+    font-size: 2rem;
+    letter-spacing: 8px;
+    }
+
+.news-static {
+    display: inline-block;
+    position: relative;
+    width: 31.6em;
+    height: fit-content;
+    background-color: #ffdb01;
+    z-index: 1;
+  }
+
+.news-text {
+    display: inline-block;
+    position: relative;
+    top: 0.2vh;
+    animation: marquee 25s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-120%);
+    }
+  }
+
+.header {
+    height: 6vh;
+    background-color: black;
+    z-index: 0;
+}
+
+.header > h1 {
+    color: #ffdb01;
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+    font-family: helvetica, bold;
+    position: relative;
+    top: -20%;
+    letter-spacing: -0.02em;
+    direction: ltr;
+}
+
+#left-align-text {
+    position: relative;
+    text-align: right;
+    margin-right: 0.3vw;
+}

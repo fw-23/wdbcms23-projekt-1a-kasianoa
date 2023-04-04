@@ -1,0 +1,1 @@
+const newsKey = "25607533f2a94565b22ec9fd6520d110"
