@@ -30,7 +30,7 @@ div {
     position: fixed;
     top: 0;
     left: 0;
-    height:93vh;
+    height: calc(94%);
     width: 100vw;
 }
 
@@ -40,7 +40,7 @@ div {
     outline: 4px;
     outline-style: solid;
     outline-color: black;
-    width: 27%;
+    width: 25%;
     justify-content: end;
 }
 
@@ -62,7 +62,7 @@ div {
 
 .bookmarks > div > ul > li {
     list-style-type: none;
-    font-size: 1.8vw; 
+    font-size: 1.5vw; 
     font-family: custom;
     color: black;
     text-align: left;
@@ -107,11 +107,11 @@ div {
 }
 
 .bored { 
-    width: 70%;
+    width: 60%;
 }
 
 .clock { 
-    width: 30%;
+    width: 40%;
 }
 
 .weather { 
@@ -203,3 +203,4 @@ letter-spacing: 8px;
     text-align: right;
     margin-right: 0.3vw;
 }
+
