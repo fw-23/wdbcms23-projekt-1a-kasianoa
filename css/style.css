@@ -1,4 +1,6 @@
+@import url(layout.css);
 @import url(scrollbar.css);
+@import url(clock.css);
 @font-face {
     font-family: custom;
     src: url(../media/font.ttf);
@@ -20,154 +22,68 @@ body {
     -o-user-drag: none;
 }
 
-div {
-    background-color: #ffdb01;
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: calc(94%);
-    width: 100vw;
-}
-
-.bookmarks {
-    display: flex;
-    flex-direction: column;
-    outline: 4px;
-    outline-style: solid;
-    outline-color: black;
-    width: 25%;
-    justify-content: end;
-}
-
-.bookmarks > div > ul {
+.Bookmarks > div > ul {
     direction: ltr;
-    height: 100%;
     line-height: 2vw;
-    margin-top: 1vh;
-    z-index: 2;
+    z-index: 1;
+}
+
+.area-fill {
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    margin-top: 0.5vh;
 }
 
 #scrollable {
     overflow-y: scroll;
     overflow-x: hidden;
     direction: rtl;
-    margin-bottom: 0;
-    margin-top: 0;
+    height: 90.5vh;
 }
 
-.bookmarks > div > ul > li {
+.Bookmarks > div > ul > li {
     list-style-type: none;
-    font-size: 1.5vw; 
+    font-size: 2vw; 
     font-family: custom;
     color: black;
     text-align: left;
-    margin-left: -1.4vw;
+    padding-left: 1vw;
+    line-height: 3.1vh;
 }
 
-.bookmarks > div > ul > li > a {
+.Bookmarks > div > ul > li > a {
     text-decoration: none;
     color: black;
 }
 
-.bookmarks > div > ul > li > a:hover {
+.Bookmarks > div > ul > li > a:hover {
     font-size: 95%;
 }
 
-.widgets {
-    display: flex;
-    flex-direction: column;
-    outline: 4px;
-    outline-style: solid;
-    outline-color: black;
-    width: 100%;
-}
 
-.widgets > div {
+.WIDGETS > div {
     display: flex;
     flex-direction: row;
 }
 
-.top {
-    height: 40%
-}
-
-.bottom {
-    height: 70%;
-}
-
-.widgets > div > div {
-    outline: 4px;
-    outline-style: solid;
-    outline-color: black;
-}
-
-.bored { 
-    width: 60%;
-}
-
-.clock { 
-    width: 40%;
-}
-
-.weather { 
-    width: 35%;
-}
-
-.chatgpt { 
-    width: 65%;
-}
-
-.news {
-    outline: 4px;
-    outline-style: solid;
-    outline-color: black;
-    height: 10vh;
-    width: 1000vw;
-    position: relative;
-    top: 90vh;
-    left: -10vh;
-    white-space: nowrap;
-}
-
-.news > span {
-    position: inherit;
+.NEWS {
+    z-index: 2;
 } 
 
-.news > div > h2 {
-position: inherit;
-left: 10vh;
-font-family: custom;
-font-size: 2rem;
-letter-spacing: 8px;
-
-}
-
-.news > span > h2 {
+.NEWS > span > h2 {
     position: inherit;
-    left: 10vh;
+    top: -3.3vh;
+    left: 5vh;
     font-family: custom;
-    font-size: 2rem;
-    letter-spacing: 8px;
-    }
-
-.news-static {
-    display: inline-block;
-    position: relative;
-    width: 31.6em;
-    height: fit-content;
-    background-color: #ffdb01;
+    font-size: 3.4vh;
+    letter-spacing: 0.47619047619047616vw;
     z-index: 1;
-  }
+    }
 
 .news-text {
     display: inline-block;
     position: relative;
-    top: 0.2vh;
     animation: marquee 25s linear infinite;
   }
   
@@ -180,20 +96,28 @@ letter-spacing: 8px;
     }
   }
 
-.header {
-    height: 6vh;
+.title {
+    height: 5.6vh;
+
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+
     background-color: black;
     z-index: 0;
 }
 
-.header > h1 {
+.title > h1 {
     color: #ffdb01;
-    font-size: 4rem;
+    font-size: 3vw;
     margin: 0;
     padding: 0;
     font-family: helvetica, bold;
     position: relative;
-    top: -20%;
+    line-height: 100%;
+    top: -0.3vh;
+    left: 0.3vw;
     letter-spacing: -0.02em;
     direction: ltr;
 }
@@ -201,6 +125,37 @@ letter-spacing: 8px;
 #left-align-text {
     position: relative;
     text-align: right;
-    margin-right: 0.3vw;
+    margin-right: 0.7vw;
 }
+
+.BORED > .bored-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 1vh;
+    left: 1vw;
+  }
+  
+  .BORED > .bored-content > h1, .BORED > .bored-content > div > h2 {
+    font-family: custom;
+    z-index:2;
+    margin: 0;
+  }
+  
+  .BORED > .bored-content > h1 {
+    font-size: 3.4vh;
+    letter-spacing: 0.47619047619047616vw;
+  }
+  
+  .BORED > .bored-content > div {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 1vh;
+    justify-content: center;
+  }
+  
+  .BORED > .bored-content > div > h2 {
+    font-size: 2.8vh;
+  }
 

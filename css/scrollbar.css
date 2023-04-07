@@ -1,6 +1,6 @@
 ::-webkit-scrollbar {
-    width: 6px;
-    height: 0.1px;
+    width: 0.35714285714285715vw;
+    height: 0.010559662090813094vh;
   }
   ::-webkit-scrollbar-button {
     width: 0px;
@@ -8,7 +8,8 @@
   }
   ::-webkit-scrollbar-thumb {
     background: #000000;
-    outline: 4px;
+    outline: 0.11904761904761904vw;
+    height: min-content;
     outline-style: solid;
     outline-color: black;
   }
@@ -22,7 +23,7 @@
     background: #ffdb01;
     outline-style: solid;
     outline-color: black;
-    border-right: 2px solid #000000;
+    border-right: #000000 0.11904761904761904vw solid;
   }
   ::-webkit-scrollbar-track:hover {
     background: #ffdb01;

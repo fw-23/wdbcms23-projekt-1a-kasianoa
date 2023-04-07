@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="../js/newsAPI.js"></script>
+    <script src="../js/onLoad.js"></script>
     <title>Startpage</title>
 </head>
 <body>
+
     <div class="container">
-        <div class="bookmarks">
-            <div class="header"> 
+        <div class="Bookmarks">
+            <div class="title"> 
                 <h1>BOOKMARKS</h1>
             </div>
-            <div id="scrollable">
-                <ul>
+            <div  id="scrollable">
+                <ul class="area-fill">
                     <li><a href="">Youtube</a></li>
                     <li><a href="">Snapchat</a></li>
                     <li><a href="">Whatsapp</a></li>
@@ -46,38 +47,37 @@
                 </ul>
             </div>
         </div>
-        <div class="widgets">
-            <div class="top">
-                <div class="bored">
-                    <div class="header" > 
-                        <h1 id="left-align-text">ARE YOU BORED?</h1>
-                    </div>
-                    <h2>BORED API</h2>
-                </div>
-                <div class="clock">
-                    <h2>ANALOG CLOCK</h2>
-                </div>
+        <div class="BORED">
+            <div class="title" > 
+                <h1 id="left-align-text">ARE YOU BORED?</h1>
             </div>
-            <div class="bottom">
-                <div class="chatgpt">
-                    <div class="header"> 
-                        <h1>CHATGPT</h1>
-                    </div>
-                    <h2>CHATGPT</h2>
-                </div>
-                <div class="weather">
-                    <h2>WEATHER</h2>
-                </div>
-                <div class="weather">
-                    <h2>WIDGET</h2>
-                </div>
-                
+            <div class="bored-content">
+                    <h1> TRY: </h1>
+                    <div> <h2 id="bored-text">  </h2></div>
+                    
             </div>
         </div>
-    </div>
-    <div class="news">
-        <div class="news-static"> <h2>BREAKING NEWS:</h2> </div>
-        <span class="news-text" > <h2 id="news"></h2> </span>
+        <div class="CHATGPT">
+            <div class="title"> 
+                <h1>CHATGPT</h1>
+            </div>
+            <h2>CHATGPT</h2>
+        </div>
+        <div class="WIDGETS">
+          <div class="WIDGET">
+            <h2>WEATHER</h2>
+          </div>
+          <div class="WIDGET1">
+            <h2>WIDGET</h2>
+          </div>
+        </div>
+        <div class="CLOCK">
+            <h2>ANALOG CLOCK</h2>
+        </div>
+        <div class="NEWS">
+            <span class="news-text" > <h2 id="news"> BREAKING NEWS: "INSERT RANDOM NEWS ARTICLE HERE" </h2> </span>
+        </div>
+      </div>
     </div>
     
     
