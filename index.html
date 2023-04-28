@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="../js/onLoad.js"></script>
+    <script src="js/main.js"></script>
     <title>Startpage</title>
 </head>
 <body>
@@ -17,33 +17,38 @@
             </div>
             <div  id="scrollable">
                 <ul class="area-fill">
-                    <li><a href="">Youtube</a></li>
-                    <li><a href="">Snapchat</a></li>
-                    <li><a href="">Whatsapp</a></li>
-                    <li><a href="">Google</a></li>
-                    <li><a href="">Pinterest</a></li>
-                    <li><a href="">Reddit</a></li>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">R/Emulation</a></li>
-                    <li><a href="">R/startpages</a></li>
-                    <li><a href="">Dribbble</a></li>
-                    <li><a href="">Telegram</a></li>
-                    <li><a href="">Wikipedia</a></li>
-                    <li><a href="">Genius</a></li>
-                    <li><a href="">ItsLearning</a></li>
-                    <li><a href="">Outlook</a></li>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Messenger</a></li>
-                    <li><a href="">Twitch</a></li>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">Github</a></li>
-                    <li><a href="">Asta</a></li>
-                    <li><a href="">Arbs</a></li>
-                    <li><a href="">OP</a></li>
-                    <li><a href="">Google Maps</a></li>
-                    <li><a href="">Discord</a></li>
-                    <li><a href="">Mastodon</a></li>
-                    <li><a href="">Docker</a></li>
+                    <li><a href="https://www.youtube.com">Youtube</a></li>
+                    <li><a href="https://web.snapchat.com">Snapchat</a></li>
+                    <li><a href="https://web.whatsapp.com">Whatsapp</a></li>
+                    <li><a href="https://www.google.com">Google</a></li>
+                    <li><a href="https://www.pinterest.com">Pinterest</a></li>
+                    <li><a href="https://www.reddit.com">Reddit</a></li>
+                    <li><a href="https://www.instagram.com">Instagram</a></li>
+                    <li><a href="https://www.reddit.com/r/emulation">R/Emulation</a></li>
+                    <li><a href="https://www.reddit.com/r/startpages">R/startpages</a></li>
+                    <li><a href="https://www.dribbble.com">Dribbble</a></li>
+                    <li><a href="https://web.telegram.org/z/">Telegram</a></li>
+                    <li><a href="https://www.wikipedia.com">Wikipedia</a></li>
+                    <li><a href="https://www.genius.com">Genius</a></li>
+                    <li><a href="https://arcada.itslearning.com/main.aspx?TextURL=CourseCards">ItsLearning</a></li>
+                    <li><a href="https://outlook.office365.com/owa/">Outlook</a></li>
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.messenger.com">Messenger</a></li>
+                    <li><a href="https://www.twitch.tv">Twitch</a></li>
+                    <li><a href="https://www.twitter.com">Twitter</a></li>
+                    <li><a href="https://www.github.com">Github</a></li>
+                    <li><a href="https://www.asta.arcada.com/Asta"</a></li>
+                    <li><a href="https://famnen.arcada.fi/arbs/">Arbs</a></li>
+                    <li><a href="https://www.op.fi">OP</a></li>
+                    <li><a href="https://www.google.com/maps">Google Maps</a></li>
+                    <li><a href="https://www.discord.com">Discord</a></li>
+                    <li><a href="https://www.mastodon.social/explore">Mastodon</a></li>
+                    <li><a href="https://www.docker.com">Docker</a></li>
+                    <li><a href="https://start.arcada.fi/sv">Start</a></li>
+                    <li><a href="https://chat.openai.com/">ChatGPT</a></li>
+                    <li><a href="https://www.leonardo.ai">Leonardo</a></li>
+                    <li><a href="https://www.alandstidningen.ax">Alandstidningen</a></li>
+                    <li><a href="https://www.nyan.ax">Nyan</a></li>
                 </ul>
             </div>
         </div>
@@ -61,24 +66,75 @@
             <div class="title"> 
                 <h1>CHATGPT</h1>
             </div>
-            <h2>CHATGPT</h2>
+            <div id="noapi"> 
+                <h2 id="desc">You're missing an API key!</h2>
+                <span id="icongpt"><i class="fa-solid fa-face-sad-tear" id="fa-face-sad-tear-yellow"></i></span> 
+            </div>
+            <div id="gptcontent">
+                <div id="gptinput"><input type="text" id="gptinputtext" name="gptinput" placeholder="Provide a prompt"></div>
+                <div id="gptbutton"> <button id="gptsend" onclick="sendPrompt()"> SEND </button></div>
+                <div id="gptoutput"> 
+                    <span id="gptoutputtext">  </span>
+                </div>
+            </div>
         </div>
         <div class="WIDGETS">
           <div class="WIDGET">
-            <h2>WEATHER</h2>
+            <div id="widget-content">   
+                <h2 id="temp"></h2>
+                <h2 id="description"></h2>
+                <span id="icon"></span> 
+            </div>
           </div>
           <div class="WIDGET1">
-            <h2>WIDGET</h2>
+
+            <div id="widget1-content"> 
+                <div class="title"> 
+                    <h1 id="curtitle">EXCHANGE</h1>
+                </div>
+                <div id="exchange">
+                    <h2 id="title">ONE EURO TO: </h2>
+                    <div><hr class="solid"></div>
+                    <h2 id="curr1">Swedish Krona: ... </h2>
+                    <h2 id="curr2">US Dollar: ... </h2>
+                    <h2 id="curr3">Russian Ruble: ... </h2>
+                    <h2 id="curr4">British Pound: ... </h2>
+                    <h2 id="curr5">Turkish Lira: ... </h2>
+                </div>
+            </div>
+
           </div>
         </div>
         <div class="CLOCK">
-            <h2>ANALOG CLOCK</h2>
+            <div class="clock">
+                <span class="hours"></span>
+                <span class="minutes"></span>
+                <span class="seconds"></span>
+                <!-- Klockan tagen från https://codepen.io/nopr/pen/kOmzEM, konverterad för att fungera på sidan själv. -->
+            </div>
         </div>
-        <div class="NEWS">
-            <span class="news-text" > <h2 id="news"> BREAKING NEWS: "INSERT RANDOM NEWS ARTICLE HERE" </h2> </span>
+        <div class="KANYE">
+            <div id="kanye-text" > <h2 id="kanye"></h2> </div>
+            <button id="openSettings"><i class="fa fa-cog" aria-hidden="true"></i></button>
         </div>
       </div>
     </div>
+
+    <div id="settings-modal">
+        <div class="modal-content">
+            <div class="title" > 
+                <h1 id="left-align-text">SETTINGS</h1>
+            </div>
+            <div class="settingscontent">
+                <form>
+                    <label for="owm"><b>OpenWeatherMap API Key: </b></label>
+                    <input type="password" placeholder="Enter API Key" name="owm" id="owm"> </br>
+                    <label for="fcgpt"><b>Freddes ChatGPT API Key: </b></label>
+                    <input type="password" placeholder="Enter API Key" name="fcgpt" id="fcgpt"> 
+                </form>
+            </div>
+        </div>
+      </div>
     
     
 </body>

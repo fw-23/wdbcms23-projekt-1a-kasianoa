@@ -1,9 +1,17 @@
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
 
-.Bookmarks,.WIDGET, .WIDGET1, .CLOCK, .NEWS, .BORED, .CHATGPT, .WIDGETS {
+.Bookmarks,
+.WIDGET,
+.WIDGET1,
+.CLOCK,
+.KANYE,
+.BORED,
+.CHATGPT,
+.WIDGETS {
   outline: 0.11904761904761904vw;
   outline-style: solid;
   outline-color: black;
@@ -19,43 +27,61 @@ html, body {
   outline-color: black;
 }
 
-.container {  display: grid;
-    grid-template-columns: 27.2727272727vw 60.5454545454vw 18.1818181818vw;
-    grid-template-rows: 20vh 76.666vh 3.333vh;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "Bookmarks BORED CLOCK"
-      "Bookmarks CHATGPT WIDGETS"
-      "NEWS NEWS NEWS";
-      height: 100%;
-  }
+.container {
+  display: grid;
+  grid-template-columns: 27.2727272727vw 60.5454545454vw 18.1818181818vw;
+  grid-template-rows: 23vh 73.666vh 3.333vh;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Bookmarks BORED CLOCK"
+    "Bookmarks CHATGPT WIDGETS"
+    "KANYE KANYE KANYE";
+  height: 100%;
+}
 
-  
-  .Bookmarks { grid-area: Bookmarks; }
-  
-  .CHATGPT { grid-area: CHATGPT; }
 
-  
-  .CHATGPT { grid-area: CHATGPT; }
-  
-  .WIDGETS {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 0fr 2fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "WIDGET WIDGET WIDGET"
-      "WIDGET WIDGET WIDGET"
-      "WIDGET1 WIDGET1 WIDGET1";
-    grid-area: WIDGETS;
-  }
-  
-  .WIDGET { grid-area: WIDGET; }
-  
-  .WIDGET1 { grid-area: WIDGET1; }
-  
-  .CLOCK { grid-area: CLOCK; }
-  
-  .NEWS { grid-area: NEWS; }
-  
+.Bookmarks {
+  grid-area: Bookmarks;
+}
+
+.CHATGPT {
+  grid-area: CHATGPT;
+}
+
+
+.CHATGPT {
+  grid-area: CHATGPT;
+}
+
+.WIDGETS {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.2fr 0fr 0.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "WIDGET WIDGET WIDGET"
+    "WIDGET WIDGET WIDGET"
+    "WIDGET1 WIDGET1 WIDGET1";
+  grid-area: WIDGETS;
+}
+
+.WIDGET {
+  grid-area: WIDGET;
+}
+
+.WIDGET1 {
+  grid-area: WIDGET1;
+}
+
+.CLOCK {
+  grid-area: CLOCK;
+  height: 100%;
+  width: 100%;
+
+}
+
+.KANYE {
+  grid-area: KANYE;
+}
