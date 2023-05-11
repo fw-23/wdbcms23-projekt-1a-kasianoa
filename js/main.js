@@ -65,6 +65,14 @@ try {
     console.log("settings.js failed")
 }
 
+try {
+    var script = document.createElement('script');
+    script.src = 'js/todoAPI.js';
+    document.head.appendChild(script);
+} catch {
+    console.log("todoAPI.js failed")
+}
+
 
 
 function sendPrompt() {

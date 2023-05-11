@@ -62,19 +62,51 @@
                     
             </div>
         </div>
-        <div class="CHATGPT">
-            <div class="title"> 
-                <h1>CHATGPT</h1>
+        <div class="GPTnTD">
+            <div class="CHATGPT">
+                <div class="title"> 
+                    <h1>CHATGPT</h1>
+                </div>
+                <div id="noapi"> 
+                    <h2 id="desc">You're missing an API key!</h2>
+                    <span id="icongpt"><i class="fa-solid fa-face-sad-tear" id="fa-face-sad-tear-yellow"></i></span> 
+                </div>
+                <div id="gptcontent">
+                    <div id="gptinput"><input type="text" id="gptinputtext" name="gptinput" placeholder="Provide a prompt"></div>
+                    <div id="gptbutton"> <button id="gptsend" onclick="sendPrompt()"> SEND </button></div>
+                    <div id="gptoutput"> 
+                        <span id="gptoutputtext">  </span>
+                    </div>
+                </div>
             </div>
-            <div id="noapi"> 
-                <h2 id="desc">You're missing an API key!</h2>
-                <span id="icongpt"><i class="fa-solid fa-face-sad-tear" id="fa-face-sad-tear-yellow"></i></span> 
-            </div>
-            <div id="gptcontent">
-                <div id="gptinput"><input type="text" id="gptinputtext" name="gptinput" placeholder="Provide a prompt"></div>
-                <div id="gptbutton"> <button id="gptsend" onclick="sendPrompt()"> SEND </button></div>
-                <div id="gptoutput"> 
-                    <span id="gptoutputtext">  </span>
+            <div class="TD">
+                <div class="title"> 
+                    <h1>TODO</h1>
+                </div>
+                <div id="noapi2"> 
+                    <h2 id="desc">You're missing an API key!</h2>
+                    <span id="icongpt"><i class="fa-solid fa-face-sad-tear" id="fa-face-sad-tear-yellow"></i></span> 
+                </div>
+                <div id="TDcontent">
+                    <div class="area-fill1">                     
+                        <div id="TDlist"></div> 
+                    </div>
+
+                    <div id="TDcontrols">
+                        <div id="inputfields"> 
+                            <div id="TDinput"><input type="text" id="TDtasktitle" name="TDtasktitle" placeholder="Add a task" required></div>
+                        </div>
+                        <div id="inputfields1">
+                            <select name="categories" id="categories" required>
+                                <option value="1">Household</option>
+                                <option value="2">Work</option>
+                                <option value="3">School</option>
+                                <option value="4">Other</option>
+                                </select>
+                            <div id="TDbutton"> <button id="TDadd" onclick="addTask()"> ADD </button></div>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -130,7 +162,9 @@
                     <label for="owm"><b>OpenWeatherMap API Key: </b></label>
                     <input type="password" placeholder="Enter API Key" name="owm" id="owm"> </br>
                     <label for="fcgpt"><b>Freddes ChatGPT API Key: </b></label>
-                    <input type="password" placeholder="Enter API Key" name="fcgpt" id="fcgpt"> 
+                    <input type="password" placeholder="Enter API Key" name="fcgpt" id="fcgpt"> </br>
+                    <label for="fcgpt"><b>ToDo API Key: </b></label>
+                    <input type="password" placeholder="Enter API Key" name="tdapi" id="tdapi"> 
                 </form>
             </div>
         </div>

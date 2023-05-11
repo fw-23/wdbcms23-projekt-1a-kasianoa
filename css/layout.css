@@ -10,7 +10,7 @@ body {
 .CLOCK,
 .KANYE,
 .BORED,
-.CHATGPT,
+.GPTnTD,
 .WIDGETS {
   outline: 0.11904761904761904vw;
   outline-style: solid;
@@ -35,7 +35,7 @@ body {
   grid-auto-flow: row;
   grid-template-areas:
     "Bookmarks BORED CLOCK"
-    "Bookmarks CHATGPT WIDGETS"
+    "Bookmarks GPTnTD WIDGETS"
     "KANYE KANYE KANYE";
   height: 100%;
 }
@@ -45,13 +45,26 @@ body {
   grid-area: Bookmarks;
 }
 
-.CHATGPT {
-  grid-area: CHATGPT;
+.GPTnTD {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "CHATGPT TD"
+    "CHATGPT TD"
+    "CHATGPT TD";
+  grid-area: GPTnTD;
 }
 
 
 .CHATGPT {
   grid-area: CHATGPT;
+}
+
+.TD {
+  grid-area: TD;
 }
 
 .WIDGETS {

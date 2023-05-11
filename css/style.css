@@ -412,7 +412,7 @@ hr.solid {
 }
 
 .settingscontent>form>#owm,
-#fcgpt {
+#fcgpt,#tdapi {
   background-color: #c7bb94;
   border: black 0.3vh solid;
   font-size: 2vh;
@@ -424,7 +424,7 @@ hr.solid {
 }
 
 .settingscontent>form>#owm:focus,
-#fcgpt:focus {
+#fcgpt:focus,#tdapi:focus {
   outline: none;
 }
 
@@ -434,7 +434,7 @@ hr.solid {
   align-items: center;
   position: absolute;
   order: -1;
-  width: 60.5vw;
+  width: 36.3vw;
   height: 68vh;
   background-color: #000000;
   opacity: 1;
@@ -450,7 +450,210 @@ hr.solid {
   color: #ffdb01;
   border: #000000 1vh solid;
   background-color: black;
-  font-size: 4.4vh;
+  font-size: 3vh;
+  margin-bottom: -5vh;
+  margin-top: 10vh;
+  letter-spacing: -0.07619047619047616vw;
+  word-wrap: normal;
+  position: relative;
+  margin-left: 1vh;
+}
+
+/* CSS för Projekt 2 */
+
+#TDcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border-left: 0.5vh solid black;
+  order: 2;
+  height: 68vh;
+}
+
+
+#TDlist {
+  display: block;
+  align-items: center;
+  margin-left: 2.5vh;
+  height: 55vh;
+}
+
+#row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 0.8vh;
+  margin-right: 0.2vw;
+}
+
+#row > #statusupdate {
+  margin-top: -1vh;
+  font-size: 2vh;
+  background-color: transparent;
+  border: none;
+  font-family: custom;
+}
+
+#row > #statusupdate:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.658);
+}
+
+#row > #createdate {
+  font-weight: 100vw;
+  font-size: 1.5vh;
+  font-style: italic;
+}
+
+#TDlist > #TDtask {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  padding: 1vh;
+  border: #000000 0.3vh solid;
+  width: 20vw;
+  font-size: 1.6vh;
+  font-family: custom;
+  justify-content: space-between;
+}
+
+#TDtask > div > #taskcat {
+  background-color: #000000;
+  color: #ffdb01;
+  border-radius: 2vh;
+  padding-left: 0.3vw;
+  padding-right: 0.3vw;
+  font-size: 1.6vh;
+  font-family: custom;
+}
+
+#TDcontrols {
+  border-top: #000000 0.4vh solid;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+#inputfields {
+  padding: 0.3vw;
+  display: flex;
+  flex-direction: row;
+}
+
+#inputfields1 {
+  padding: 0.3vw;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffdb01;
+}
+
+#TDinput {
+  margin-right: 0.5vw;
+  width: 22.5vw;
+  font-size: 1.6vh;
+  font-family: custom;
+  border: #000000 0.3vh solid;
+  padding: 0.3vw;
+  
+}
+
+#TDinput > input {
+  width: 100%;
+  border: none;
+  font-size: 1.6vh;
+  font-family: custom;
+  background-color: transparent;
+  color: black;
+}
+
+#taskid {
+  display: none;
+}
+
+#TDinput > input::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+#TDinput > input:focus {
+  outline: none;
+}
+
+#categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffdb01;
+  border: #000000 0.3vh dashed;
+  padding: 0.3vw;
+  width: 11.35vw;
+  font: 1.6vh custom;
+}
+
+#categories:focus {
+  outline: none;
+}
+
+#TDbutton {
+  margin-left: 6.3vw;
+}
+
+#TDadd {
+  align-items: center;
+  background-color: black;
+  width: 5.5vw;
+  min-width: fit-content;
+  height: 4.5vh;
+  border-radius: 2vh;
+  border: 0.3vh solid black;
+  font-family: custom;
+  font-size: 2.4vh;
+  color: #ffdb01;
+  overflow-x: hidden;
+}
+
+#TDadd:hover {
+  cursor: pointer;
+  background-color: #ffdb01;
+  color: black;
+}
+
+.area-fill1 {
+  height:100%;
+  width: 99%;
+  z-index: 0;
+  overflow-y: auto;
+  position: inherit;
+}
+
+#noapi2 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  order: -1;
+  width: 25.1vw;
+  height: 68vh;
+  background-color: #000000;
+  opacity: 1;
+  background-image:  linear-gradient(#ffdb01 1px, transparent 1px), linear-gradient(to right, #ffdb01 1px, #000 1px);
+  background-size: 20px 20px;
+  /* Pattern taget från https://www.magicpattern.design/tools/css-backgrounds */
+  overflow: auto;
+  margin-left: -1vw;
+}
+
+#noapi2>* {
+  font-family: custom;
+  color: #ffdb01;
+  border: #000000 0.2vh solid;
+  padding: 0.5vh;
+  border-radius: 20vh;
+  background-color: black;
+  font-size: 3vh;
   margin-bottom: -5vh;
   margin-top: 10vh;
   letter-spacing: -0.07619047619047616vw;
