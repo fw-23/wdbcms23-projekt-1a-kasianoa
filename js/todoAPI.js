@@ -1,5 +1,5 @@
 const tdKey = localStorage.getItem('tdKey');
-const url = "http://128.214.253.222:8220";
+const url = "http://128.214.253.222:8221";
 
 if (tdKey === "") {
     document.getElementById('noapi2').style.display = 'flex';
@@ -10,49 +10,53 @@ if (tdKey === "") {
 }
 
 
-async function fetchTasks() {
-    const resp = await fetch(url + "/todo?api_key=" + tdKey, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-            }
+ async function fetchTasks() {
+    try {
+        const resp = await fetch(url + "/todo?api_key=" + tdKey, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+                }
+            });
+        const jsonData = await resp.json();
+        console.log(jsonData);
+    
+        const TDlist = document.getElementById('TDlist');
+        TDlist.innerHTML = "";
+        const TDtask = document.getElementById('TDtask');
+    
+        jsonData.todos.forEach(task => {
+    
+            const html = `
+            
+            <div id="TDtask">
+              <div> 
+                <div id="taskdesc">${task.title}</div>
+                <div id="taskcat">${task.category_name}</div> 
+              </div>
+              <div id="row">
+                <div id="createdate">FROM: ${task.created_at}</div>
+                <button id="statusupdate" onclick="TDupdate()">${task.done ? "●" : "○"}</button>
+                <div id="taskid"> ${task.id} </div>
+              </div>
+            </div>
+          `;
+          TDlist.insertAdjacentHTML('beforeend', html);
+    
+          if(task.done) {
+            const taskElement = TDlist.lastElementChild;
+            taskElement.style.border = "0.3vh dashed black"
+          }
         });
-    const jsonData = await resp.json();
-    console.log(jsonData);
-
-    const TDlist = document.getElementById('TDlist');
-    TDlist.innerHTML = "";
-    const TDtask = document.getElementById('TDtask');
-
-    jsonData.todos.forEach(task => {
-
-        const html = `
-        
-        <div id="TDtask">
-          <div> 
-            <div id="taskdesc">${task.title}</div>
-            <div id="taskcat">${task.category_name}</div> 
-          </div>
-          <div id="row">
-            <div id="createdate">FROM: ${task.created_at}</div>
-            <button id="statusupdate" onclick="TDupdate()">${task.done ? "●" : "○"}</button>
-            <div id="taskid"> ${task.id} </div>
-          </div>
-        </div>
-      `;
-      TDlist.insertAdjacentHTML('beforeend', html);
-
-      if(task.done) {
-        const taskElement = TDlist.lastElementChild;
-        taskElement.style.border = "0.3vh dashed black"
-      }
-    });
-
+    
+    } catch (error) {
+        console.log("fetch failed");
+    }
 }
 fetchTasks();
 
+
 async function addTask() {
-    //if empty
     if (document.getElementById("TDtasktitle").value == "") {
         alert("Please fill in both fields.");
         return;

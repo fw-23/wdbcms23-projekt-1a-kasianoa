@@ -2,6 +2,22 @@ console.log("onLoad.js loaded");
 
 try {
     var script = document.createElement('script');
+    script.src = 'js/settings.js';
+    document.head.appendChild(script);
+} catch {
+    console.log("settings.js failed")
+}
+
+try {
+    var script = document.createElement('script');
+    script.src = 'js/clock.js';
+    document.head.appendChild(script);
+} catch {
+    console.log("clock.js failed")
+}
+
+try {
+    var script = document.createElement('script');
     script.src = 'js/kanyeAPI.js';
     document.head.appendChild(script);
 } catch {
@@ -43,26 +59,10 @@ try {
 
 try {
     var script = document.createElement('script');
-    script.src = 'js/clock.js';
-    document.head.appendChild(script);
-} catch {
-    console.log("clock.js failed")
-}
-
-try {
-    var script = document.createElement('script');
     script.src = 'js/gptAPI.js';
     document.head.appendChild(script);
 } catch {
     console.log("gptAPI.js failed")
-}
-
-try {
-    var script = document.createElement('script');
-    script.src = 'js/settings.js';
-    document.head.appendChild(script);
-} catch {
-    console.log("settings.js failed")
 }
 
 try {

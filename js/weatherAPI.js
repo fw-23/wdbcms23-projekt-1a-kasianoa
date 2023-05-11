@@ -8,7 +8,7 @@ if (navigator.geolocation) {
 
         console.log("weatherAPI.js: GEOLOCATION ON")
         const apiKey = localStorage.getItem('weatherKey');
-        const apiUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
 
         const temperatureElement = document.getElementById('temp');
