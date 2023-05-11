@@ -23,7 +23,6 @@ if (tdKey === "") {
     
         const TDlist = document.getElementById('TDlist');
         TDlist.innerHTML = "";
-        const TDtask = document.getElementById('TDtask');
     
         jsonData.todos.forEach(task => {
     
